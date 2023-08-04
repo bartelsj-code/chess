@@ -1,0 +1,34 @@
+from piece import *
+
+class Bishop(Piece):
+    def __init__(self, color, square, win):
+        super().__init__(color, "B", square, win)
+     
+    def makeShape(self):
+        x, y, s = self.getCC()
+        #head
+        y-= 0.00*s
+        self.shape.append(Circle(Point(x, y-0.3*s), 0.04*s))
+        self.shape.append(Circle(Point(x, y-0.2*s), 0.09*s))
+        #body
+        y -= 0.05*s
+        p1 = Point(x - 0.04*s, y + 0*s)
+        p2 = Point(x + 0.04*s, y + 0*s)
+        p3 = Point(x + 0.06*s, y + 0.25*s) 
+        p4 = Point(x + 0.14*s, y + 0.28*s) 
+        p5 = Point(x + 0.16*s, y + 0.32*s) 
+        p6 = Point(x + 0.16*s, y + 0.35*s) 
+        p7 = Point(x - 0.16*s, y + 0.35*s) 
+        p8 = Point(x - 0.16*s, y + 0.32*s) 
+        p9 = Point(x - 0.14*s, y + 0.28*s) 
+        p10 = Point(x - 0.06*s, y + 0.25*s)
+        self.shape.append(Polygon(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10))
+        #neck
+        y += 0.01*s
+        p1 = Point(x, y - 0.08*s)
+        p2 = Point(x-0.13*s, y - 0.05*s)
+        p3 = Point(x-0.13*s, y - 0.02*s)
+        p4 = Point(x, y + 0.01*s)
+        p5 = Point(x+0.13*s, y - 0.02*s)
+        p6 = Point(x+0.13*s, y - 0.05*s)
+        self.shape.append(Polygon(p1, p2, p3,p4,p5,p6))

@@ -1,0 +1,11 @@
+Remaining:
+    En Passant
+        Only move after
+            Need to finish in the cloning depo
+        Smooth Animation
+        Highlighting
+
+    Interface:
+        Interaction
+
+    

@@ -1,0 +1,4 @@
+All you really need is to get the list of coordinates as extracted from the list of possible moves to 
+
+
+

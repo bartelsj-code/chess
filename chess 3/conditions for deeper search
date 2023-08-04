@@ -1,0 +1,7 @@
+If My move was a check: Look deeper.
+If the square I arrive at on my final depth has any threats, go one depth further and only look at moves that are captures or checks.
+Both of the above conditionals require looking from the opposite side at threats. Option 1: 
+
+
+
+I want to point to a square in the "my view" gs, and check the level of threat, gs
