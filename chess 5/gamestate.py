@@ -155,7 +155,7 @@ class Gamestate:
         king = self.piece_collections[key] 
         if self.previous_move == None:
             return self.coords_threatened(king.coords, self.active_player)
-        self.was_previous_move_check()
+        # self.was_previous_move_check()
         return self.coords_threatened(king.coords, self.active_player)
     
     def was_previous_move_check(self):

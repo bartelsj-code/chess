@@ -42,11 +42,11 @@ class BasicABDictBot(Bot):
                 return 0
             else:
                 if gamestate.active_player == "W":
-                    self.eval_dict[gamestate] = -inf
-                    return -inf
-                else:
                     self.eval_dict[gamestate] = inf
                     return inf
+                else:
+                    self.eval_dict[gamestate] = -inf
+                    return -inf
         if depth == 0:
             return self.evaluator.evaluate(gamestate)
         moves = gamestate.get_possible_moves()

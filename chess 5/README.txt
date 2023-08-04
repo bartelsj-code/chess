@@ -1,1 +1,1 @@
-hello, I am John
+Chess 5 is the completely rewritten from the ground up version of chess 3. Still working on foundations. only file not made by me is graphics.py
