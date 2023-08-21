@@ -19,13 +19,13 @@ class Game:
         self.gui = GUI("Chess Game", 800, "W", 0.6)
         position_file_name = "position_csv_files/standard_setup.csv"
         # position_file_name = "position_csv_files/test_position.csv"
-        position_file_name = "position_csv_files/endgame_depth_test.csv"
+        # position_file_name = "position_csv_files/endgame_depth_test.csv"
         # position_file_name = "position_csv_files/morphy_zugszwang_mate_in 3.csv"
         exporting_file_name = "position_csv_files/recorder.csv"
         self.board = Board(position_file_name, exporting_file_name)
         # self.white_player = BasicMCTSBot("W", self.board, 300, 8)
         self.white_player = Human("W", self.board, self.gui)
-        self.black_player = BasicABDictBot("B", self.board, 5) 
+        self.black_player = BasicABDictBot("B", self.board, 1) 
         # self.black_player = Human("B", self.board, self.gui)
         self.players = {"W": self.white_player, "B": self.black_player}
         self.display_board_gui()

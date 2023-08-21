@@ -1,7 +1,7 @@
 import math
 class Evaluator:
     def __init__(self):
-        self.moves_made = 0
+        self.moves_made = 50
         self.counter = 0
         self.encroachmentLevels = {"P": 0, "N": 1, "B": 0.5, "R": 0, "Q": 0, "K": 0}
         self.encroachmentFactor = 0.002

@@ -13,12 +13,12 @@ class Game:
         self.board = Board(length, 0.5, self.win, view)
         positionFile = "StandardSetup.csv"
         # positionFile = "StandardSetupDisadvantage.csv"
-        # positionFile = "test.csv"
+        positionFile = "test.csv"
         # positionFile = "recorder.csv"
         self.whitePlayer = Human("W", self.board, self.win)
         # self.blackPlayer = Human("B", self.board, self.win)
-        # self.whitePlayer = engine6.Engine("W", self.board, 12000)
-        self.blackPlayer = engine6.Engine("B", self.board, 2000)
+        self.whitePlayer = engine6.Engine("W", self.board, 30000)
+        self.blackPlayer = engine6.Engine("B", self.board, 30000)
         self.board.setupPositionFromCSV(positionFile)
         self.moderator = Moderator(self.board)
 
